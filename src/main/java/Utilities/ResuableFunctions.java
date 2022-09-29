@@ -34,6 +34,13 @@ public class ResuableFunctions {
 	public ResuableFunctions() {
 
 	}
+	
+	/*****************************************************************************************
+	 * Description : To click given web element
+	 * Arguments : WebElement, Element Info 
+	 * Return Value : NA
+	 * Author : Nikhil David
+	 *****************************************************************************************/
 
 	public void clickElement(WebElement e, String ElementInfo) {
 
@@ -42,12 +49,27 @@ public class ResuableFunctions {
 
 	}
 
+	/*****************************************************************************************
+	 * Description : To write text in to a  web element
+	 * Arguments : WebElement, Element Info, Input text 
+	 * Return Value : NA
+	 * Author : Nikhil David
+	 *****************************************************************************************/
+	
 	public void writeText(WebElement e, String ElementInfo, String text) {
 		waitunitlElementVisible(e, ElementInfo).sendKeys(text);
 
 		test.info("Entered value in: " + ElementInfo);
 	}
 
+	
+	/*****************************************************************************************
+	 * Description : To get text from a web element
+	 * Arguments : WebElement, Element Info 
+	 * Return Value : String
+	 * Author : Nikhil David
+	 *****************************************************************************************/
+	
 	public String readText(WebElement e, String ElementInfo) {
 		waitunitlElementVisible(e, ElementInfo);
 		test.info("Retrieved text from: " + ElementInfo);
@@ -55,12 +77,14 @@ public class ResuableFunctions {
 
 	}
 
-	public void selectDropownByValue(WebElement e, String value) {
 
-		drop = new Select(e);
-		drop.selectByValue(value);
-	}
-
+	/*****************************************************************************************
+	 * Description : To wait until given web element is visible
+	 * Arguments : WebElement, Element Info 
+	 * Return Value : WebElement
+	 * Author : Nikhil David
+	 *****************************************************************************************/
+	
 	public WebElement waitunitlElementVisible(WebElement e, String ElementInfo) {
 		test.info("Waiting for element: " + ElementInfo);
 		wait.until(ExpectedConditions.visibilityOf(e));
@@ -70,25 +94,62 @@ public class ResuableFunctions {
 
 	}
 
+	
+	/*****************************************************************************************
+	 * Description : To generate timestamp in 'MM-dd-yyyy' format
+	 * Arguments : WebElement, Element Info 
+	 * Return Value : NA
+	 * Author : Nikhil David
+	 *****************************************************************************************/
+	
 	public String generateTimestamp() {
 
 		return (new SimpleDateFormat("MM-dd-yyyy-hhmmss").format(new java.util.Date()));
 	}
 
+	
+	/*****************************************************************************************
+	 * Description : To take a screenshot
+	 * Arguments : WebDriver instance 
+	 * Return Value : String
+	 * Author : Nikhil David
+	 *****************************************************************************************/
+	
 	public String takeScreenShot(WebDriver driver) {
 
 		return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
 	}
 
+	/*****************************************************************************************
+	 * Description : To validate given two strings are same
+	 * Arguments : String1, String2 
+	 * Return Value : NA
+	 * Author : Nikhil David
+	 *****************************************************************************************/
+	
 	public void AssertStringsEqual_True(String s1, String s2) {
 		Assert.assertTrue(s1.equals(s2));
 	}
 
+	/*****************************************************************************************
+	 * Description : To verify given web element is displayed
+	 * Arguments : WebElement, Element Info 
+	 * Return Value : NA
+	 * Author : Nikhil David
+	 *****************************************************************************************/
+	
 	public void verifyElement_isDisplayed(WebElement e, String ElementInfo) {
 		waitunitlElementVisible(e, ElementInfo);
 		Assert.assertTrue(e.isDisplayed());
 	}
 
+	/*****************************************************************************************
+	 * Description : To convert given date in format 'yyyy-MM-dd' to 'dd-MM-yyyy'
+	 * Arguments : String 
+	 * Return Value : String
+	 * Author : Nikhil David
+	 *****************************************************************************************/
+	
 	public String foramtDate_yyyyMMdd_to_ddMMyyyy(String dateAsString) {
 		DateFormat originalFormat = new SimpleDateFormat("yyyy-MM-dd");
 		DateFormat targetFormat = new SimpleDateFormat("dd-MM-yyyy");
@@ -101,6 +162,13 @@ public class ResuableFunctions {
 		return targetFormat.format(date);
 	}
 
+	/*****************************************************************************************
+	 * Description : To select option from a dropdown element using value
+	 * Arguments : WebElement, Value to be selected
+	 * Return Value : NA
+	 * Author : Nikhil David
+	 *****************************************************************************************/
+	
 	public void selectDropDownByValue(WebElement e, String value) {
 		waitunitlElementVisible(e, "");
 		Select typeDropMenu = new Select(e);
