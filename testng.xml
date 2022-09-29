@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+<listeners>
+<listener class-name="ExtentRep.Listeners"/>
+	</listeners>
+  <test thread-count="5" name="Add new owner and validate details entered">
+    <classes>
+      <class name="Tests.AddNewOwner"/>
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="5" name="Add new pet and validate details entered">
+    <classes>
+      <class name="Tests.AddNewPet"/>
+    </classes>
+  </test> <!-- Test -->
+
+  <test thread-count="5" name="Validate Logo in 'Pet Clinic' home page">
+    <classes>
+      <class name="Tests.ValidateLogo"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

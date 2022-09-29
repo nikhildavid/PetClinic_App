@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="ExtentRep.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="Add new pet and validate details entered(failed)">
+    <classes>
+      <class name="Tests.AddNewPet">
+        <methods>
+          <include name="add_Pet_OwnerProfile"/>
+          <include name="startTest"/>
+          <include name="r"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- Tests.AddNewPet -->
+    </classes>
+  </test> <!-- Add new pet and validate details entered(failed) -->
+</suite> <!-- Failed suite [Suite] -->
