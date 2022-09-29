@@ -6,7 +6,7 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 public class ExtentManager {
     public static final ExtentReports extentReports = new ExtentReports();
     public synchronized static ExtentReports createExtentReports() {
-    	String path =	System.getProperty("user.dir")+"\\reports\\index100.html";
+    	String path =	System.getProperty("user.dir")+"\\reports\\PetClinic_Test Execution Report.html";
 		System.out.println(path);
         //ExtentSparkReporter reporter = new ExtentSparkReporter("./extent-reports/extent-report.html");
 		ExtentSparkReporter reporter = new ExtentSparkReporter(path);

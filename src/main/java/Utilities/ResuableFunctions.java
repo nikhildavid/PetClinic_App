@@ -65,9 +65,7 @@ public class ResuableFunctions {
 		test.info("Waiting for element: " + ElementInfo);
 		wait.until(ExpectedConditions.visibilityOf(e));
 		test.info(ElementInfo, MediaEntityBuilder
-				.createScreenCaptureFromBase64String(takeScreenShot(driver, "ElementInfo"), "ElementInfo").build());
-		// test.log(LogStatus.INFO, ElementInfo +
-		// test.addScreenCapture("C:\\Users\\Nikhil\\Desktop\\pic1.png"));
+				.createScreenCaptureFromBase64String(takeScreenShot(driver, "Screenshot"), "ElementInfo").build());
 		return e;
 
 	}
@@ -87,8 +85,8 @@ public class ResuableFunctions {
 		Assert.assertTrue(s1.equals(s2));
 	}
 
-	public void verifyElement_isDisplayed(WebElement e) {
-		waitunitlElementVisible(e, "");
+	public void verifyElement_isDisplayed(WebElement e, String ElementInfo) {
+		waitunitlElementVisible(e, ElementInfo);
 		Assert.assertTrue(e.isDisplayed());
 	}
 

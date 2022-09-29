@@ -31,7 +31,7 @@ public class HomePage{
 	WebElement homePage_Logo;
 	public void verify_HomePage_Logo_isDisplayed() {
 		
-	runtime.library.verifyElement_isDisplayed(homePage_Logo);
+	runtime.library.verifyElement_isDisplayed(homePage_Logo,"homePage_Logo");
 	}
 	
 

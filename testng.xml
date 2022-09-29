@@ -3,7 +3,7 @@
 <suite name="Suite">
 
 <listeners>
-<listener class-name="ExtentRep.Listeners"/>
+<listener class-name="Listeners.Listeners"/>
 	</listeners>
   <test thread-count="5" name="Add new owner and validate details entered">
     <classes>
