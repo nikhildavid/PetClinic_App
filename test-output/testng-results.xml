@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-29T08:09:02Z" name="Suite" finished-at="2022-09-29T08:09:14Z" duration-ms="12260">
+  <suite started-at="2022-09-29T08:17:15Z" name="Suite" finished-at="2022-09-29T08:17:27Z" duration-ms="11402">
     <groups>
     </groups>
-    <test started-at="2022-09-29T08:09:02Z" name="Add new owner and validate details entered" finished-at="2022-09-29T08:09:07Z" duration-ms="5345">
+    <test started-at="2022-09-29T08:17:15Z" name="Add new owner and validate details entered" finished-at="2022-09-29T08:17:21Z" duration-ms="5234">
       <class name="Tests.AddNewOwner">
-        <test-method is-config="true" signature="startTest(org.testng.ITestContext)[pri:0, instance:Tests.AddNewOwner@6db9f5a4]" started-at="2022-09-29T08:09:02Z" name="startTest" finished-at="2022-09-29T08:09:04Z" duration-ms="2034" status="PASS">
+        <test-method is-config="true" signature="startTest(org.testng.ITestContext)[pri:0, instance:Tests.AddNewOwner@6db9f5a4]" started-at="2022-09-29T08:17:15Z" name="startTest" finished-at="2022-09-29T08:17:17Z" duration-ms="2031" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,19 +18,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
-        <test-method signature="addNewOwner_ValidateDetails()[pri:0, instance:Tests.AddNewOwner@6db9f5a4]" started-at="2022-09-29T08:09:04Z" name="addNewOwner_ValidateDetails" finished-at="2022-09-29T08:09:07Z" duration-ms="3215" status="PASS">
+        <test-method signature="addNewOwner_ValidateDetails()[pri:0, instance:Tests.AddNewOwner@6db9f5a4]" started-at="2022-09-29T08:17:17Z" name="addNewOwner_ValidateDetails" finished-at="2022-09-29T08:17:21Z" duration-ms="3089" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addNewOwner_ValidateDetails -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Tests.AddNewOwner@6db9f5a4]" started-at="2022-09-29T08:09:07Z" name="teardown" finished-at="2022-09-29T08:09:07Z" duration-ms="82" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Tests.AddNewOwner@6db9f5a4]" started-at="2022-09-29T08:17:21Z" name="teardown" finished-at="2022-09-29T08:17:21Z" duration-ms="99" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Tests.AddNewOwner -->
     </test> <!-- Add new owner and validate details entered -->
-    <test started-at="2022-09-29T08:09:07Z" name="Add new pet and validate details entered" finished-at="2022-09-29T08:09:12Z" duration-ms="4829">
+    <test started-at="2022-09-29T08:17:21Z" name="Add new pet and validate details entered" finished-at="2022-09-29T08:17:25Z" duration-ms="4379">
       <class name="Tests.AddNewPet">
-        <test-method is-config="true" signature="startTest(org.testng.ITestContext)[pri:0, instance:Tests.AddNewPet@65b3f4a4]" started-at="2022-09-29T08:09:07Z" name="startTest" finished-at="2022-09-29T08:09:08Z" duration-ms="1388" status="PASS">
+        <test-method is-config="true" signature="startTest(org.testng.ITestContext)[pri:0, instance:Tests.AddNewPet@65b3f4a4]" started-at="2022-09-29T08:17:21Z" name="startTest" finished-at="2022-09-29T08:17:22Z" duration-ms="1224" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -41,19 +41,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
-        <test-method signature="add_Pet_OwnerProfile()[pri:0, instance:Tests.AddNewPet@65b3f4a4]" started-at="2022-09-29T08:09:08Z" name="add_Pet_OwnerProfile" finished-at="2022-09-29T08:09:12Z" duration-ms="3360" status="PASS">
+        <test-method signature="add_Pet_OwnerProfile()[pri:0, instance:Tests.AddNewPet@65b3f4a4]" started-at="2022-09-29T08:17:22Z" name="add_Pet_OwnerProfile" finished-at="2022-09-29T08:17:25Z" duration-ms="3095" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- add_Pet_OwnerProfile -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Tests.AddNewPet@65b3f4a4]" started-at="2022-09-29T08:09:12Z" name="teardown" finished-at="2022-09-29T08:09:12Z" duration-ms="78" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Tests.AddNewPet@65b3f4a4]" started-at="2022-09-29T08:17:25Z" name="teardown" finished-at="2022-09-29T08:17:25Z" duration-ms="58" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Tests.AddNewPet -->
     </test> <!-- Add new pet and validate details entered -->
-    <test started-at="2022-09-29T08:09:12Z" name="Validate Logo in &#039;Pet Clinic&#039; home page" finished-at="2022-09-29T08:09:14Z" duration-ms="2027">
+    <test started-at="2022-09-29T08:17:25Z" name="Validate Logo in &#039;Pet Clinic&#039; home page" finished-at="2022-09-29T08:17:27Z" duration-ms="1735">
       <class name="Tests.ValidateLogo">
-        <test-method is-config="true" signature="startTest(org.testng.ITestContext)[pri:0, instance:Tests.ValidateLogo@11c9af63]" started-at="2022-09-29T08:09:12Z" name="startTest" finished-at="2022-09-29T08:09:13Z" duration-ms="1387" status="PASS">
+        <test-method is-config="true" signature="startTest(org.testng.ITestContext)[pri:0, instance:Tests.ValidateLogo@11c9af63]" started-at="2022-09-29T08:17:25Z" name="startTest" finished-at="2022-09-29T08:17:26Z" duration-ms="1195" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -64,25 +64,25 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
-        <test-method signature="validateHomePageLogo()[pri:0, instance:Tests.ValidateLogo@11c9af63]" started-at="2022-09-29T08:09:13Z" name="validateHomePageLogo" finished-at="2022-09-29T08:09:14Z" duration-ms="577" status="PASS">
+        <test-method signature="validateHomePageLogo()[pri:0, instance:Tests.ValidateLogo@11c9af63]" started-at="2022-09-29T08:17:26Z" name="validateHomePageLogo" finished-at="2022-09-29T08:17:27Z" duration-ms="484" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateHomePageLogo -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Tests.ValidateLogo@11c9af63]" started-at="2022-09-29T08:09:14Z" name="teardown" finished-at="2022-09-29T08:09:14Z" duration-ms="60" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Tests.ValidateLogo@11c9af63]" started-at="2022-09-29T08:17:27Z" name="teardown" finished-at="2022-09-29T08:17:27Z" duration-ms="54" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Tests.ValidateLogo -->
       <class name="Tests.AddNewOwner">
-        <test-method is-config="true" signature="r()[pri:0, instance:Tests.AddNewOwner@6db9f5a4]" started-at="2022-09-29T08:09:14Z" name="r" finished-at="2022-09-29T08:09:15Z" duration-ms="920" status="PASS">
+        <test-method is-config="true" signature="r()[pri:0, instance:Tests.AddNewOwner@6db9f5a4]" started-at="2022-09-29T08:17:27Z" name="r" finished-at="2022-09-29T08:17:28Z" duration-ms="836" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- r -->
-        <test-method is-config="true" signature="r()[pri:0, instance:Tests.AddNewPet@65b3f4a4]" started-at="2022-09-29T08:09:15Z" name="r" finished-at="2022-09-29T08:09:15Z" duration-ms="559" status="PASS">
+        <test-method is-config="true" signature="r()[pri:0, instance:Tests.AddNewPet@65b3f4a4]" started-at="2022-09-29T08:17:28Z" name="r" finished-at="2022-09-29T08:17:28Z" duration-ms="568" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- r -->
-        <test-method is-config="true" signature="r()[pri:0, instance:Tests.ValidateLogo@11c9af63]" started-at="2022-09-29T08:09:15Z" name="r" finished-at="2022-09-29T08:09:16Z" duration-ms="554" status="PASS">
+        <test-method is-config="true" signature="r()[pri:0, instance:Tests.ValidateLogo@11c9af63]" started-at="2022-09-29T08:17:28Z" name="r" finished-at="2022-09-29T08:17:29Z" duration-ms="564" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- r -->

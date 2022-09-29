@@ -61,7 +61,7 @@ public class AddNewOwner {
 	@AfterTest
 	public void teardown() {
 		basesteps.runtime.driver.close();
-		//basesteps.runtime.extent.flush();
+	
 	}
 	@AfterSuite
 	public void r() {

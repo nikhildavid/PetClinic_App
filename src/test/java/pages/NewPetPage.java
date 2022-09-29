@@ -25,7 +25,7 @@ public class NewPetPage {
 		
 		runtime.library.writeText(newPetPage_PetName, "newPetPage_PetName", PetName);
 	}
-	//driver.findElement(By.xpath("//input[@id='name']")).sendKeys(PetName);
+
 	
 	@FindBy(xpath="//input[@id='birthDate']")
 	WebElement newPetPage_PetDOB;
@@ -33,7 +33,7 @@ public class NewPetPage {
 		
 		runtime.library.writeText(newPetPage_PetDOB, "newPetPage_PetDOB", PetDOB);
 	}
-	//driver.findElement(By.xpath("//input[@id='birthDate']")).sendKeys(inputBdate);
+	
 	
 	@FindBy(xpath="//select[@id='type']")
 	WebElement newPetPage_PetTypeDropdown;
@@ -46,7 +46,7 @@ public class NewPetPage {
 		
 		runtime.library.clickElement(newPetPage_SubmitButton, "newPetPage_SubmitButton");
 	}
-	//driver.findElement(By.xpath("//button[@type='submit']")).click();
+
 	private void initialiseObjects() {
 		PageFactory.initElements(driver, this);
 	}

@@ -9,7 +9,7 @@ public class Browser {
 
 	WebDriver driver;
 	public WebDriver getDriver(String Browser) {
-		System.out.println("Inside get driver");
+
 		
 		if(Browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();

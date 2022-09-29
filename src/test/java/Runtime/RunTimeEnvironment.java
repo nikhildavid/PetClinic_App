@@ -22,13 +22,11 @@ public class RunTimeEnvironment {
 	public ResuableFunctions library;
 	
 	public RunTimeEnvironment (String Browser, String TestCaseName) {
-		System.out.println("Inside run time environment");
+
 		this.driver=B.getDriver(Browser);
 		this.TestCaseName=TestCaseName;
-		//extent=ExtentManager.createExtentReports();
 		ExtentTestManager.startTest(TestCaseName, "TestDesc");
 		test=ExtentTestManager.getTest();
-		//=extent.createTest(TestCaseName);
 		readData=new DataManager();
 		library = new ResuableFunctions(driver,test);
 		

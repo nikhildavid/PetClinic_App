@@ -25,19 +25,19 @@ public class OwnerInformationPage {
 		runtime.library.clickElement(ownerInformationPage_AddPetButton, "ownerInformationPage_AddPetButton");
 	}
 	
-	//String PetNameCheck = driver.findElement(By.xpath("//dl[@class='dl-horizontal']/dd[1]")).getText();
+	
 	@FindBy(xpath="//dl[@class='dl-horizontal']/dd[1]")
 	WebElement ownerInformation_PetName;
 	public String readOwnerInformation_PetName() {
 		return runtime.library.readText(ownerInformation_PetName, "ownerInformation_PetName");
 	}
-	//String BDateCheck = driver.findElement(By.xpath("//dl[@class='dl-horizontal']/dd[2]")).getText();
+	
 	@FindBy(xpath="//dl[@class='dl-horizontal']/dd[2]")
 	WebElement ownerInformation_PetDOB;
 	public String readOwnerInformation_PetDOB() {
 		return runtime.library.readText(ownerInformation_PetDOB, "ownerInformation_PetDOB");
 	}
-	//String TypeCheck = driver.findElement(By.xpath("//dl[@class='dl-horizontal']/dd[3]")).getText();
+	
 	@FindBy(xpath="//dl[@class='dl-horizontal']/dd[3]")
 	WebElement ownerInformation_PetType;
 	public String readOwnerInformation_PetType() {

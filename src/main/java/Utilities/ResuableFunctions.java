@@ -65,7 +65,7 @@ public class ResuableFunctions {
 		test.info("Waiting for element: " + ElementInfo);
 		wait.until(ExpectedConditions.visibilityOf(e));
 		test.info(ElementInfo, MediaEntityBuilder
-				.createScreenCaptureFromBase64String(takeScreenShot(driver, "Screenshot"), "ElementInfo").build());
+				.createScreenCaptureFromBase64String(takeScreenShot(driver), "Screenshot").build());
 		return e;
 
 	}
@@ -75,9 +75,8 @@ public class ResuableFunctions {
 		return (new SimpleDateFormat("MM-dd-yyyy-hhmmss").format(new java.util.Date()));
 	}
 
-	public String takeScreenShot(WebDriver driver, String screenshotName) {
+	public String takeScreenShot(WebDriver driver) {
 
-		System.out.println("Inside screenshot");
 		return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
 	}
 
