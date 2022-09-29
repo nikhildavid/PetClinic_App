@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import Base.BaseSteps;
-import utils.ExtentTestManager;
+import Managers.ExtentTestManager;
 
 public class AddNewOwner {
 

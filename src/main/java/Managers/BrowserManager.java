@@ -1,11 +1,11 @@
-package Driver;
+package Managers;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Browser {
+public class BrowserManager {
 
 	WebDriver driver;
 	public WebDriver getDriver(String Browser) {

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Tests.AddNewPet" class="method navigator-link" hash-for-method="add_Pet_OwnerProfile">add_Pet_OwnerProfile</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,11 +117,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="Tests.AddNewOwner" class="method navigator-link" hash-for-method="addNewOwner_ValidateDetails">addNewOwner_ValidateDetails</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Tests.AddNewPet" class="method navigator-link" hash-for-method="add_Pet_OwnerProfile">add_Pet_OwnerProfile</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -127,6 +136,58 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">Tests.AddNewPet</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="add_Pet_OwnerProfile">
+                  </a> <!-- add_Pet_OwnerProfile -->
+                  <span class="method-name">add_Pet_OwnerProfile</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //a[contains(text(),&apos;Pet&apos;)]&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at Utilities.ResuableFunctions.waitunitlElementVisible(ResuableFunctions.java:66)
+	at Utilities.ResuableFunctions.clickElement(ResuableFunctions.java:40)
+	at pages.OwnerInformationPage.clickOwnerInformationPage_AddPetButton(OwnerInformationPage.java:25)
+	at Tests.AddNewPet.add_Pet_OwnerProfile(AddNewPet.java:36)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[contains(text(),&apos;Pet&apos;)]&quot;}
+  (Session info: chrome=105.0.5195.127)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-VT2RIPP&apos;, ip: &apos;192.168.1.11&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Nikhil\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52171}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 8fcb8dfde396ea8e50b97e7935236e68
+*** Element info: {Using=xpath, value=//a[contains(text(),&apos;Pet&apos;)]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 29 more
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -138,21 +199,6 @@
                   <a name="validateHomePageLogo">
                   </a> <!-- validateHomePageLogo -->
                   <span class="method-name">validateHomePageLogo</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">Tests.AddNewPet</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="add_Pet_OwnerProfile">
-                  </a> <!-- add_Pet_OwnerProfile -->
-                  <span class="method-name">add_Pet_OwnerProfile</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -247,20 +293,20 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'add_Pet_OwnerProfile')
 data.setCell(0, 2, 'Tests.AddNewPet')
-data.setCell(0, 3, 3095);
+data.setCell(0, 3, 11187);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'addNewOwner_ValidateDetails')
 data.setCell(1, 2, 'Tests.AddNewOwner')
-data.setCell(1, 3, 3089);
+data.setCell(1, 3, 3106);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'validateHomePageLogo')
 data.setCell(2, 2, 'Tests.ValidateLogo')
-data.setCell(2, 3, 484);
+data.setCell(2, 3, 444);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 14 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -288,67 +334,69 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">Tests.AddNewOwner</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">startTest(org.testng.TestRunner@55651434)</span>
+                <span class="method-name">startTest(org.testng.TestRunner@633cc6b5)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">addNewOwner_ValidateDetails</span>
-                <span class="method-start">2040 ms</span>
+                <span class="method-start">2072 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">5132 ms</span>
+                <span class="method-start">5181 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Tests.AddNewPet</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">startTest(org.testng.TestRunner@5634a861)</span>
-                <span class="method-start">5274 ms</span>
+                <span class="method-name">startTest(org.testng.TestRunner@6342ff7f)</span>
+                <span class="method-start">5300 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">add_Pet_OwnerProfile</span>
                 <span class="method-start">6498 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">9594 ms</span>
+                <span class="method-start">17688 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Tests.ValidateLogo</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">startTest(org.testng.TestRunner@2b0dc227)</span>
-                <span class="method-start">9665 ms</span>
+                <span class="method-name">startTest(org.testng.TestRunner@5ceecfee)</span>
+                <span class="method-start">17775 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">validateHomePageLogo</span>
-                <span class="method-start">10860 ms</span>
+                <span class="method-start">18987 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">11345 ms</span>
+                <span class="method-start">19432 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Tests.AddNewOwner</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">r</span>
-                <span class="method-start">11408 ms</span>
+                <span class="method-start">19493 ms</span>
               </div> <!-- configuration-suite after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Tests.AddNewPet</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">r</span>
-                <span class="method-start">12244 ms</span>
+                <span class="method-start">20324 ms</span>
               </div> <!-- configuration-suite after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Tests.ValidateLogo</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">r</span>
-                <span class="method-start">12812 ms</span>
+                <span class="method-start">20888 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

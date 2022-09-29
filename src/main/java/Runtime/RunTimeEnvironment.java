@@ -2,18 +2,17 @@ package Runtime;
 
 import org.openqa.selenium.WebDriver;
 
-import utils.ExtentManager;
-import utils.ExtentTestManager;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
-import Driver.Browser;
 import Utilities.ResuableFunctions;
+import Managers.BrowserManager;
 import Managers.DataManager;
+import Managers.ExtentTestManager;
 
 public class RunTimeEnvironment {
 	
-	Browser B = new Browser();
+	BrowserManager B = new BrowserManager();
 	public WebDriver driver;
 	String TestCaseName;
 	public ExtentTest test;
